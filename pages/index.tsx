@@ -10,6 +10,8 @@ const Home: NextPage = () => {
     includeTokenMetadata: true,
   })
 
+  console.log('DEBUG-cyberkongzSales', cyberkongzSales)
+
   return (
     <div className='w-full'>
       <SaleCardList
