@@ -1,0 +1,20 @@
+# Note that we only run prettier in src/** anyway, see package.json script `format`.
+
+node_modules
+.public
+
+# IDE
+.vscode
+.idea
+
+# git
+.github
+.git-worktrees
+.husky
+
+# production
+build
+
+# next
+.next
+.vercel
