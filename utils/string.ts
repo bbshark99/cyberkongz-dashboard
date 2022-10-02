@@ -16,3 +16,8 @@ export const getQuery = <T extends AnyObject>(params: T = {} as T): string => {
     .map(([key, value]) => `${key}=${value}`)
     .join('&')
 }
+
+export const toHumanTime = (time: number | string): string => {
+  const date = new Date(parseInt(`${time}`, 10) * 1000)
+  return date.toLocaleString()
+}

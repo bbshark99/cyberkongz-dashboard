@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Typography, Avatar } from 'design-systems'
+import { toHumanTime } from 'utils/string'
 
 export interface SingleSaleCardProps {
   id: string | number
@@ -8,6 +9,7 @@ export interface SingleSaleCardProps {
   txHash: string
   ethPrice: string | number
   usdPrice: string | number
+  time: string
 }
 
 export interface SaleCardListProps {
@@ -24,6 +26,7 @@ export const getSingleSaleCard = (sales: SingleSaleResponse[] = []): SingleSaleC
     txHash: sale.txHash,
     ethPrice: sale.price.amount.native,
     usdPrice: sale.price.amount.usd,
+    time: toHumanTime(sale.timestamp),
   }))
 }
 
@@ -48,6 +51,7 @@ export const SaleCardList: React.FC<SaleCardListProps> = ({ loading, title, sale
             <Typography>{sale.tokenId}</Typography>
             <Typography weight='bold'>{sale.ethPrice} ETH</Typography>
             <Typography weight='bold'>$ {sale.usdPrice}</Typography>
+            <Typography>{sale.time}</Typography>
           </div>
         </Card>
       ))}

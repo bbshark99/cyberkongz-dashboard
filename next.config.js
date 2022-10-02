@@ -6,7 +6,6 @@ const nextConfig = {
   },
   images: {
     domains: ['api.reservoir.tools'],
-    formats: ['image/jpeg'],
   },
   reactStrictMode: false,
 }
