@@ -4,8 +4,11 @@ const nextConfig = {
     config.experiments = { ...config.experiments, ...{ topLevelAwait: true } }
     return config
   },
-  reactStrictMode: true,
-  swcMinify: true,
+  images: {
+    domains: ['api.reservoir.tools'],
+    formats: ['image/jpeg'],
+  },
+  reactStrictMode: false,
 }
 
 module.exports = nextConfig

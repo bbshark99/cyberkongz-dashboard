@@ -1,3 +1,5 @@
+declare type BigNumberish = import('@ethersproject/bignumber').BigNumberish
+
 type AnyObject<T = any> = Record<string, T>
 type AnyFunction = (...args: any[]) => any
 

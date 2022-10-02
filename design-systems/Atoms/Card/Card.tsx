@@ -1,16 +1,29 @@
 import React from 'react'
+import type { PropsWithChildren } from 'react'
 
-export interface CardProps {};
+type CardSizes = 'sm' | 'md' | 'lg'
 
-export const Card: React.FC<CardProps> = () => {
-    const className = [
-        // border
-        "rounded-lg",
-        // padding
-        "p-[25px]"
-    ].join(' ');
+const getSize = (size: CardSizes) => {
+  switch (size) {
+    case 'sm':
+      return 'p-[11px]'
+    case 'md':
+      return 'p-[18px]'
+    case 'lg':
+      return 'p-[25px]'
+  }
+}
+export interface CardProps extends PropsWithChildren {
+  size?: CardSizes
+}
 
-    return (
-        <div className={className}></div>
-    );
-};
+export const Card: React.FC<CardProps> = ({ size = 'lg', children }) => {
+  const className = [
+    // border
+    'rounded-[15px] border border-card-default',
+    // padding
+    getSize(size),
+  ].join(' ')
+
+  return <div className={className}>{children}</div>
+}

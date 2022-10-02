@@ -1,10 +1,9 @@
-export const SIDEBAR_MENU = [
-    {
-        title: 'Cyberkongz',
-        route: '/'
-    },
-    {
-        title: 'Cyberkongz VX',
-        route: '/vx'
-    }
-] as const;
+import { CHAIN_IDS } from './web3'
+
+export const CONNECTOR_LOCAL_KEY = 'connector'
+
+export const CYBERKONGZ_ADDRESS = '0x57a204AA1042f6E66DD7730813f4024114d74f37'
+
+export const CYBERKONGZ_VX_ADDRESSES = '0x7EA3Cca10668B8346aeC0bf1844A49e995527c8B'
+
+export const CYBERKONGZ_MAX_LIMIT = 20

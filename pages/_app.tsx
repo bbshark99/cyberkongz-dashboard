@@ -1,8 +1,16 @@
 import type { AppProps } from 'next/app'
-import "../assets/scss/main.css"
+import { Providers } from 'context/providers'
+import { Layout } from 'design-systems'
+import '../assets/scss/main.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Providers>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Providers>
+  )
 }
 
 export default MyApp
