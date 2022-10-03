@@ -11,6 +11,8 @@ yarn
 yarn start
 ```
 
+### Explains about this repo
+
 
 1. Frameworks:
 - Next.js - Typescript
