@@ -8,7 +8,10 @@
 
 ```
 yarn
-yarn start
+yarn dev
+
+// build
+yarn build
 ```
 
 ### Explains about this repo
